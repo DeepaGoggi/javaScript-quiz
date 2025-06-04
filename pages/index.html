@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="../assets/logo.jpg"
+              alt="Logo"
+              width="70"
+              height="65"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./quest.html">Play</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./score.html">View Score</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1
+        style="
+          text-align: center;
+          font-family: Arial, sans-serif;
+          color: #17437c;
+          font-size: 36px;
+          margin-top: 50px;
+          font-weight: 600;
+        "
+      >
+        Welcome to Quiz Ground
+      </h1>
+
+      <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+          <div class="card-body">
+            <h3 class="card-title mb-4 text-primary">
+              <i class="bi bi-info-circle-fill me-2"></i>Rules for Quiz
+            </h3>
+            <ul class="list-unstyled ps-3 border-start border-4 border-primary">
+              <li class="mb-2">✅ Select one topic from the dropdown.</li>
+              <li class="mb-2">
+                ⏱️ You will have <strong>60 seconds</strong> to complete the
+                quiz.
+              </li>
+              <li class="mb-2">
+                ❓ Each quiz has <strong>5 questions</strong>.
+              </li>
+              <li class="mb-2">
+                🎯 Minimum <strong>4 correct answers</strong> to pass.
+              </li>
+            </ul>
+
+            <div class="mt-4">
+              <label for="topicSelect" class="form-label fw-bold"
+                >Choose a topic:</label
+              >
+              <select id="topicSelect" class="form-select w-50 mb-3">
+                <option disabled selected>-- Select Topic --</option>
+                <option value="computer">Computer</option>
+                <option value="history">History</option>
+              </select>
+
+              <button class="btn btn-primary px-4" onclick="startQuiz()">
+                Start
+              </button>
+
+              <div
+                id="error-message"
+                class="text-danger mt-1"
+                style="display: none"
+                aria-live="polite"
+              >
+                Please select a topic to start the quiz.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/quest.js"></script>
+    <script src="../js/start.js"></script>
+    <script src="../js/score.js"></script>
+  </body>
+</html>
