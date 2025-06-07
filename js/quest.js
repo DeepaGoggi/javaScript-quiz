@@ -1,3 +1,8 @@
+if (!topic) {
+  alert("Please select a topic first.");
+  window.location.href = "../index.html";
+}
+
 // questions
 const quizData = {
   computer: [

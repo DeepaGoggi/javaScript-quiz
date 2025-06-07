@@ -5,6 +5,11 @@ const tableDiv = document.getElementById("result-table");
 const finalScore = document.getElementById("final-score");
 const finalResult = document.getElementById("final-result");
 
+if (!userAnswers || !correctAnswers || score === null) {
+  alert("Please complete the quiz first!");
+  window.location.href = "../index.html";
+}
+
 let html = "";
 
 results.forEach((res, index) => {
